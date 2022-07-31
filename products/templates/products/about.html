@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>{{title}}</title>
-</head>
-<body>
-{{title}}
-</body>
-</html>
+{% extends 'products/base.html'%}
+
+{% block content %}
+<h1>{{title}}</h1>
+<p>Содержимое страницы</p>
+{% endblock %}
