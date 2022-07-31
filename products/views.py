@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound
 
+menu = ["О сайте","Добавить статью","Обратная связь","Войти"]
+
 
 def index(request):
-    return render(request, 'products/index.html')
+    return render(request, 'products/index.html',{'menu': menu, 'title':'Главная страница'})
 
 def about(request):
-    return render(request, 'products/about.html')
+    return render(request, 'products/about.html',{'title':'О сайте'})
 
 
 def categories(request, catid):
