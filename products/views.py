@@ -3,7 +3,10 @@ from django.http import HttpResponse, HttpResponseNotFound
 
 
 def index(request):
-    return HttpResponse("Страница приложения products.")
+    return render(request, 'products/index.html')
+
+def about(request):
+    return render(request, 'products/about.html')
 
 
 def categories(request, catid):
